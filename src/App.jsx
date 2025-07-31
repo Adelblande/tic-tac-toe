@@ -1,8 +1,9 @@
 import "./App.css";
+import { ResetButton } from "./components/index.js";
 import { useGame } from "./hooks/use-game";
 
 function App() {
-  const { handleClick, game, message } = useGame();
+  const { game, message, handleClick, resetGame } = useGame();
 
   return (
     <>
@@ -16,6 +17,7 @@ function App() {
           );
         })}
       </div>
+      <ResetButton onClick={resetGame} value="Reset Game" />
     </>
   );
 }

@@ -9,6 +9,13 @@ export function useGame() {
   const [winner, setWinner] = useState(null);
   const [message, setMessage] = useState(null);
 
+  const resetGame = useCallback(() => {
+    setPlayer("x");
+    setGame(INITIAL_GAME);
+    setWinner(null);
+    setMessage(null);
+  }, []);
+
   const handleClick = useCallback(
     (clickedIndex) => {
       if (game[clickedIndex] || winner) {
@@ -40,5 +47,6 @@ export function useGame() {
     winner,
     message,
     handleClick,
+    resetGame,
   };
 }
