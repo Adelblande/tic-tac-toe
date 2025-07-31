@@ -44,9 +44,11 @@ export function useGame() {
 
   return {
     game,
+    player,
     winner,
     message,
     handleClick,
     resetGame,
+    setPlayer,
   };
 }
