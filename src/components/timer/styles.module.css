@@ -1,9 +1,7 @@
 .timer {
   display: flex;
-  /* background-color: #fff; */
   justify-content: flex-end;
   align-items: center;
-  /* margin: 16px 0; */
 }
 
 .timer h3 {

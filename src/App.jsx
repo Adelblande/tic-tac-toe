@@ -1,4 +1,4 @@
-import "./App.css";
+import styles from "./App.module.css";
 import { ResetButton, Timer, Board, Scores } from "./components/index.js";
 import { Menu } from "./components/menu/index.jsx";
 import { useGame } from "./hooks/use-game";
@@ -11,13 +11,13 @@ function App() {
 
   return (
     <>
-      <header className="header">
+      <header className={styles.header}>
         <Scores scores={scores} />
         {!message && <Timer player={player} setPlayer={setPlayer} />}
       </header>
 
-      <main className="main">
-        {message && <span className="message">{message}</span>}
+      <main className={styles.main}>
+        {message && <span className={styles.message}>{message}</span>}
         <Board game={game} handleClick={handleClick} />
         <ResetButton onClick={resetGame} value="Reset Game" />
         <Menu />
