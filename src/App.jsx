@@ -1,26 +1,23 @@
 import "./App.css";
-import { ResetButton } from "./components/index.js";
-import { Timer } from "./components/timer/index.jsx";
+import { ResetButton, Timer, Board, Scores } from "./components/index.js";
 import { useGame } from "./hooks/use-game";
 
 function App() {
-  const { game, message, player, handleClick, resetGame, setPlayer } =
+  const { game, message, player, scores, handleClick, resetGame, setPlayer } =
     useGame();
 
   return (
     <>
-      {!message && <Timer player={player} setPlayer={setPlayer} />}
-      {message && <h1>{message}</h1>}
-      <div className="board">
-        {game.map((value, index) => {
-          return (
-            <span key={index} onClick={() => handleClick(index)}>
-              {value}
-            </span>
-          );
-        })}
-      </div>
-      <ResetButton onClick={resetGame} value="Reset Game" />
+      <header className="header">
+        <Scores scores={scores} />
+        {!message && <Timer player={player} setPlayer={setPlayer} />}
+      </header>
+
+      <main className="main">
+        {message && <span className="message">{message}</span>}
+        <Board game={game} handleClick={handleClick} />
+        <ResetButton onClick={resetGame} value="Reset Game" />
+      </main>
     </>
   );
 }

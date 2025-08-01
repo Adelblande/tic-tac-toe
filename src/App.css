@@ -1,24 +1,41 @@
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px; */
+  width: 100%;
+  height: 100vh;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  /* padding: 2rem; */
+  /* border: 1px solid red; */
+  /* text-align: center; */
 }
 
-div.board {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-}
-
-div.board span {
+.header {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  background-color: #f05006;
+  width: 100%;
+  height: 80px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100px;
-  height: 100px;
-  font-size: 2rem;
-  background-color: #333;
+  width: 100%;
+  padding: 1rem;
+  height: calc(100vh - 80px);
+}
+
+.main button {
+  max-width: 334px;
+}
+
+.message {
+  font-size: 1.5rem;
   color: #fff;
-  cursor: pointer;
+  text-align: center;
+  margin: 16px 0;
 }

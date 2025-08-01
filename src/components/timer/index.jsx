@@ -1,3 +1,4 @@
+import "./styles.css";
 import { useState, useEffect } from "react";
 
 const TIME_LIMIT = 5;
@@ -26,9 +27,10 @@ export function Timer({ player, setPlayer }) {
 
   return (
     <div className="timer">
-      <h1>
+      {/* <img src="/ampulheta.png" width={40} height={40} /> */}
+      <h3>
         Player {player}: {time}
-      </h1>
+      </h3>
     </div>
   );
 }

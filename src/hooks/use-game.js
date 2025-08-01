@@ -8,6 +8,7 @@ export function useGame() {
   const [game, setGame] = useState(INITIAL_GAME);
   const [winner, setWinner] = useState(null);
   const [message, setMessage] = useState(null);
+  const [scores, setScores] = useState({ x: 0, o: 0 });
 
   const resetGame = useCallback(() => {
     setPlayer("x");
@@ -29,6 +30,13 @@ export function useGame() {
 
       setWinner(playerWinner);
 
+      if (playerWinner) {
+        setScores((state) => ({
+          ...state,
+          [playerWinner.player]: state[playerWinner.player] + 1,
+        }));
+      }
+
       setGame(newGame);
 
       setPlayer(player === "x" ? "o" : "x");
@@ -47,6 +55,7 @@ export function useGame() {
     player,
     winner,
     message,
+    scores,
     handleClick,
     resetGame,
     setPlayer,
