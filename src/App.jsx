@@ -1,10 +1,13 @@
 import "./App.css";
 import { ResetButton, Timer, Board, Scores } from "./components/index.js";
+import { Menu } from "./components/menu/index.jsx";
 import { useGame } from "./hooks/use-game";
+import { useSettings } from "./hooks/use-settings";
 
 function App() {
   const { game, message, player, scores, handleClick, resetGame, setPlayer } =
     useGame();
+  const { colors } = useSettings();
 
   return (
     <>
@@ -17,6 +20,7 @@ function App() {
         {message && <span className="message">{message}</span>}
         <Board game={game} handleClick={handleClick} />
         <ResetButton onClick={resetGame} value="Reset Game" />
+        <Menu />
       </main>
     </>
   );

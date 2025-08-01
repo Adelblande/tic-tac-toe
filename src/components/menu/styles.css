@@ -1,0 +1,109 @@
+.set {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+.set button {
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  border-radius: 30px;
+  background-color: #fff;
+  border: none;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+  font-size: 24px;
+  color: #f05006;
+
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+.set button:focus {
+  outline: none;
+}
+
+.set button.main-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: #f05006;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+}
+
+.set ul {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  padding-right: 5px;
+  margin: 0;
+  list-style: none;
+  z-index: 10;
+
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+.set ul li {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  margin-bottom: -10%;
+  opacity: 0;
+
+  -webkit-transition: 0.3s ease-out;
+  -moz-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+/* .set ul li label {
+  margin-right: 10px;
+  white-space: nowrap;
+  display: block;
+  margin-top: 10px;
+  padding: 5px 8px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  height: 18px;
+  font-size: 16px;
+  pointer-events: none;
+  opacity: 0;
+
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+} */
+
+.set.show button.main-menu,
+.set.show button.main-menu {
+  outline: none;
+  background-color: #f05006;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.set.show button.main-menu:before,
+.set.show button.main-menu + ul,
+.set.show button.main-menu + ul {
+  bottom: 70px;
+}
+
+.set.show button.main-menu + ul li,
+.set.show button.main-menu + ul li {
+  margin-bottom: 10px;
+  opacity: 1;
+}
+
+.set.show button.main-menu + ul li:hover label,
+.set.show button.main-menu + ul li:hover label {
+  opacity: 1;
+}
