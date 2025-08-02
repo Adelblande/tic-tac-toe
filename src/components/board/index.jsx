@@ -1,6 +1,9 @@
 import styles from "./styles.module.css";
+import { useSettings } from "../../hooks/use-settings";
 
-export function Board({ game, colors, handleClick }) {
+export function Board({ game, handleClick }) {
+  const { colors } = useSettings();
+
   return (
     <div className={styles.board}>
       {game.map((value, index) => {

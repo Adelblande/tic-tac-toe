@@ -1,8 +1,8 @@
-import { useCallback, useState, useEffect, useContext } from "react";
+import { useCallback, useState, useEffect } from "react";
 import { verifyIfHasWinner } from "../utils/verify-if-has-winner";
-import { SettingsContext } from "../context/settings-context";
 import { resetfillingCombinationWinner } from "../utils/reset-filling-combination-winner";
 import { fillCombinationWinner } from "../utils/fill-combination-winner";
+import { useSettings } from "./use-settings";
 
 const INITIAL_GAME = [null, null, null, null, null, null, null, null, null];
 
@@ -13,7 +13,7 @@ export function useGame() {
   const [message, setMessage] = useState(null);
   const [scores, setScores] = useState({ x: 0, o: 0 });
 
-  const { colors } = useContext(SettingsContext);
+  const { colors } = useSettings();
 
   const resetGame = useCallback(() => {
     setPlayer("x");
