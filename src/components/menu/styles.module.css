@@ -13,7 +13,6 @@
   border: none;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
   font-size: 24px;
-  color: #f05006;
 
   -webkit-transition: 0.2s ease-out;
   -moz-transition: 0.2s ease-out;
@@ -32,7 +31,7 @@
   width: 60px;
   height: 60px;
   border-radius: 30px;
-  background-color: #f05006;
+  background-color: #3c3c3c;
   right: 0;
   bottom: 0;
   z-index: 20;
@@ -68,7 +67,7 @@
 .set.show button.mainMenu,
 .set.show button.mainMenu {
   outline: none;
-  background-color: #f05006;
+  background-color: #3c3c3c;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
 }
 

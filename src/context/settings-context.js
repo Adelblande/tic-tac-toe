@@ -2,22 +2,22 @@ import { createContext } from "react";
 
 export const availableColorsCombinations = [
   {
-    x: "#f00065",
-    o: "#49007e",
-    board: "#242424",
-    winningCombination: "#f05006",
+    x: "#7f00a4",
+    o: "#d008f1",
+    board: "#d6c1ef",
+    winningCombination: "#aaffff",
   },
   {
-    x: "#029b99",
-    o: "#ccff33",
-    board: "#030303",
-    winningCombination: "#f05006",
+    x: "#008209",
+    o: "#50cc56",
+    board: "#28a730",
+    winningCombination: "#aaffff",
   },
   {
-    x: "#242424",
-    o: "#f05006",
-    board: "#3c3c3c",
-    winningCombination: "#f05006",
+    x: "#8b0004",
+    o: "#e11940",
+    board: "#b90a1e",
+    winningCombination: "#aaffff",
   },
 ];
 
