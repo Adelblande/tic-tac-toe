@@ -28,7 +28,7 @@ export function Timer({ player, setPlayer }) {
   return (
     <div className={styles.timer}>
       <h3>
-        Player {player}: {time}
+        Player {player.toUpperCase()}: {time}
       </h3>
     </div>
   );

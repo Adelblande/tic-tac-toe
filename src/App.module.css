@@ -4,31 +4,6 @@
   margin: 0 auto;
 }
 
-.header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 24px;
-  background-color: #f05006;
-  width: 100%;
-  height: 80px;
-}
-
-.main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 1rem;
-  height: calc(100vh - 80px);
-}
-
-.main button {
-  max-width: 334px;
-}
-
 .message {
   font-size: 1.5rem;
   color: #fff;

@@ -1,8 +1,10 @@
 import styles from "./styles.module.css";
-import { useSettings } from "../../hooks/use-settings";
+import { useContext, useEffect } from "react";
+import { SettingsContext } from "../../context/settings-context";
 
 export function Menu() {
-  const { availableColorsCombinations, setColors } = useSettings();
+  const { availableColorsCombinations, colors, setColors } =
+    useContext(SettingsContext);
 
   function toggle() {
     if (
@@ -14,6 +16,11 @@ export function Menu() {
     }
   }
 
+  function handleSelectColor(colorsSelected) {
+    setColors((state) => ({ ...state, ...colorsSelected }));
+    toggle();
+  }
+
   return (
     <div className={styles.set}>
       <button className={styles.mainMenu} onClick={toggle}>
@@ -22,7 +29,7 @@ export function Menu() {
       <ul>
         {availableColorsCombinations.map((colors, index) => (
           <li key={index}>
-            <button onClick={() => setColors(colors)}>
+            <button onClick={() => handleSelectColor(colors)}>
               <span style={{ color: colors.x }}>x</span>
               <span style={{ color: colors.o }}>o</span>
               <span style={{ color: colors.board }}>#</span>
