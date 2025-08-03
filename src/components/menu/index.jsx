@@ -26,7 +26,12 @@ export function Menu() {
         className={styles.mainMenu}
         onClick={toggle}
       >
-        <img src="/settings.png" alt="Menu settings" width={30} height={30} />
+        <img
+          src="/tic-tac-toe/settings.png"
+          alt="Menu settings"
+          width={30}
+          height={30}
+        />
       </button>
       <ul>
         {availableColorsCombinations.map((colors, index) => (
