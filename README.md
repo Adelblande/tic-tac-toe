@@ -15,7 +15,7 @@ As regras do jogo
 
 ### Clonando e rodando o projeto
 
-Para rodar o projeto localmente, você precisará ter instalado em sua máquina o node e o npm ja que é um projeto desenvolvido em react, execute os comandos abaixo em um terminal e divirta-se.
+Para rodar o projeto localmente, você precisará ter instalado em sua máquina o node e o npm, já que é um projeto desenvolvido em react, execute os comandos abaixo em um terminal e divirta-se ou clique [aqui](https://adelblande.github.io/tic-tac-toe/).
 
 ```bash
 
