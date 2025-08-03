@@ -5,7 +5,7 @@
   gap: 1rem;
 }
 
-.board span {
+.board button {
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -16,4 +16,5 @@
   background-color: #fff;
   color: #333;
   cursor: pointer;
+  border: none;
 }

@@ -8,7 +8,8 @@ export function Board({ game, handleClick }) {
     <div className={styles.board}>
       {game.map((value, index) => {
         return (
-          <span
+          <button
+            type="button"
             data-testid={`span-cell-${index}`}
             id={`cell-${index}`}
             key={index}
@@ -16,7 +17,7 @@ export function Board({ game, handleClick }) {
             onClick={() => handleClick(index)}
           >
             {value}
-          </span>
+          </button>
         );
       })}
     </div>
