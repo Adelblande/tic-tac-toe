@@ -9,6 +9,7 @@ export function Board({ game, handleClick }) {
       {game.map((value, index) => {
         return (
           <span
+            data-testid={`span-cell-${index}`}
             id={`cell-${index}`}
             key={index}
             style={{ color: colors[value] }}

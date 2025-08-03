@@ -21,13 +21,20 @@ export function Menu() {
 
   return (
     <div className={styles.set}>
-      <button className={styles.mainMenu} onClick={toggle}>
+      <button
+        data-testid="settings-button"
+        className={styles.mainMenu}
+        onClick={toggle}
+      >
         <img src="/settings.png" alt="Menu settings" width={30} height={30} />
       </button>
       <ul>
         {availableColorsCombinations.map((colors, index) => (
           <li key={index}>
-            <button onClick={() => handleSelectColors(colors)}>
+            <button
+              data-testid={`settings-button-color-${index}`}
+              onClick={() => handleSelectColors(colors)}
+            >
               <span style={{ color: colors.x }}>x</span>
               <span style={{ color: colors.o }}>o</span>
               <span style={{ color: colors.board }}>#</span>

@@ -5,7 +5,7 @@ import {
 } from "../settings-context";
 
 export function SettingsProvider({ children }) {
-  const [colors, setColors] = useState(availableColorsCombinations[1]);
+  const [colors, setColors] = useState(availableColorsCombinations[0]);
 
   return (
     <SettingsContext.Provider

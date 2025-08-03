@@ -26,7 +26,7 @@ export function Timer({ player, setPlayer }) {
   }, [player]);
 
   return (
-    <div className={styles.timer}>
+    <div data-testid="timer" className={styles.timer}>
       <h3>
         Player {player.toUpperCase()}: {time}
       </h3>
