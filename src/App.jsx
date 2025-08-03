@@ -1,35 +1,35 @@
-import { useState } from "react";
-import "./App.css";
+import styles from "./App.module.css";
 
-const initialGame = [null, null, null, null, null, null, null, null, null];
+import {
+  ResetButton,
+  Timer,
+  Board,
+  Scores,
+  Header,
+  Main,
+  Menu,
+} from "./components/index.js";
+import { useGame } from "./hooks/use-game";
+import { SettingsProvider } from "./context/settings-provider";
 
-function App() {
-  const [player, setPlayer] = useState("x");
-  const [game, setGame] = useState(initialGame);
-
-  function handleClick(clickedIndex) {
-    if (game[clickedIndex]) {
-      return;
-    }
-
-    const newGame = [...game];
-    newGame[clickedIndex] = player;
-    setGame(newGame);
-
-    setPlayer(player === "x" ? "o" : "x");
-  }
+export default function App() {
+  const { game, message, player, scores, handleClick, resetGame, setPlayer } =
+    useGame();
 
   return (
-    <div className="board">
-      {game.map((value, index) => {
-        return (
-          <span key={index} onClick={() => handleClick(index)}>
-            {value}
-          </span>
-        );
-      })}
-    </div>
+    <SettingsProvider>
+      <Header>
+        <Scores scores={scores} />
+        {!message && <Timer player={player} setPlayer={setPlayer} />}
+      </Header>
+
+      <Main>
+        {message && <span className={styles.message}>{message}</span>}
+        <Board game={game} handleClick={handleClick} />
+        <ResetButton onClick={resetGame} value="Reset Game" />
+
+        <Menu />
+      </Main>
+    </SettingsProvider>
   );
 }
-
-export default App;

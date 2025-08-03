@@ -1,0 +1,10 @@
+.scores {
+  display: flex;
+  flex-direction: column;
+}
+
+.scores h3,
+p {
+  font-size: 1rem;
+  color: #fff;
+}

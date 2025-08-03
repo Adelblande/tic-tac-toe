@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ResetButton > should render ResetButton component 1`] = `
+<div>
+  <button
+    class="_resetButton_baa250"
+  />
+</div>
+`;

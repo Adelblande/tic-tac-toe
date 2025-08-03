@@ -1,0 +1,12 @@
+.timer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.timer h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+}

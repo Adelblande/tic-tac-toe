@@ -1,0 +1,89 @@
+.set {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+.set button {
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  border-radius: 30px;
+  background-color: #fff;
+  border: none;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+  font-size: 24px;
+
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+.set button:focus {
+  outline: none;
+}
+
+.set button.mainMenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: #3c3c3c;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+}
+
+.set ul {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  padding-right: 5px;
+  margin: 0;
+  list-style: none;
+  z-index: 10;
+
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+.set ul li {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  margin-bottom: -10%;
+  opacity: 0;
+
+  -webkit-transition: 0.3s ease-out;
+  -moz-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.set.show button.mainMenu,
+.set.show button.mainMenu {
+  outline: none;
+  background-color: #3c3c3c;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.set.show button.mainMenu:before,
+.set.show button.mainMenu + ul,
+.set.show button.mainMenu + ul {
+  bottom: 70px;
+}
+
+.set.show button.mainMenu + ul li,
+.set.show button.mainMenu + ul li {
+  margin-bottom: 10px;
+  opacity: 1;
+}
+
+.set.show button.mainMenu + ul li:hover label,
+.set.show button.mainMenu + ul li:hover label {
+  opacity: 1;
+}
