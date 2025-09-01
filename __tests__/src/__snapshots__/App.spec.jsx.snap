@@ -39,41 +39,50 @@ exports[`App > should render screen of game 1`] = `
     <div
       class="_board_f7a227"
     >
-      <span
+      <button
         data-testid="span-cell-0"
         id="cell-0"
+        type="button"
       />
-      <span
+      <button
         data-testid="span-cell-1"
         id="cell-1"
+        type="button"
       />
-      <span
+      <button
         data-testid="span-cell-2"
         id="cell-2"
+        type="button"
       />
-      <span
+      <button
         data-testid="span-cell-3"
         id="cell-3"
+        type="button"
       />
-      <span
+      <button
         data-testid="span-cell-4"
         id="cell-4"
+        type="button"
       />
-      <span
+      <button
         data-testid="span-cell-5"
         id="cell-5"
+        type="button"
       />
-      <span
+      <button
         data-testid="span-cell-6"
         id="cell-6"
+        type="button"
       />
-      <span
+      <button
         data-testid="span-cell-7"
         id="cell-7"
+        type="button"
       />
-      <span
+      <button
         data-testid="span-cell-8"
         id="cell-8"
+        type="button"
       />
     </div>
     <button
@@ -91,7 +100,7 @@ exports[`App > should render screen of game 1`] = `
         <img
           alt="Menu settings"
           height="30"
-          src="/settings.png"
+          src="/tic-tac-toe/settings.png"
           width="30"
         />
       </button>
